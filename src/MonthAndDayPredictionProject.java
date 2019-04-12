@@ -2,35 +2,39 @@ import java.util.Scanner;
 
 public class MonthAndDayPredictionProject {
 
-public static void main(String[] args){
+    public static void main(String[] args){
 
 
-}
-
-public static int writtenFormOfBirthMonth(){
-Scanner userBirthDayInput = new Scanner (System.in);
+    }
 
 
-}
+    public static void writtenFormOfBirthMonth(){
+        Scanner userBirthDayInput = new Scanner (System.in);
+        System.out.println("What is your birthday? (please put in in mm/dd/yy)");
+        String input = userBirthDayInput.nextLine();
 
-public static int dayOfTheWeek(){
-String h;
-int day,day2,day3,day4,day5,day6,day7;
-
-day = 1;
-day2 = 2;
-day3 = 3;
-day4 = 4;
-day5 = 5;
-day6 = 6;
-day7 = 7;
+    }
 
 
-return;}
+    public static int dayOfTheWeek(){
+        String h;
+        int Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday;
 
-public static int poemDependingOnDay(){
+        Sunday = 1;
+        Monday = 2;
+        Tuesday = 3;
+        Wednesday = 4;
+        Thursday = 5;
+        Friday = 6;
+        Saturday = 7;
 
 
-}
+    }
+
+    public static int poemDependingOnDay(){
+
+
+    }
+
 
 }
