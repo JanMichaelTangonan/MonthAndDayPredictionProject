@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class MonthAndDayPredictionProject {
 
     public static void main(String[] args){
-
+        //Placeholder stuff
+        int a;
+        writtenFormOfBirthMonth(a);
 
 
 
@@ -27,24 +29,24 @@ public class MonthAndDayPredictionProject {
 
         System.out.println("What year were you born?");
         yearInput = userBirthDayInput.nextInt();
-
+return;
     }
 
 
     public static int dayOfTheWeek(){
         //The days of the week
-
         int h;
-        String sunday,monday,tuesday,wednesday,thursday,friday,saturday;
-        h = 0,1,2,3,4,5,6;
+        int dayOfTheWeek = h;
+        h saturday,sunday,monday,tuesday,wednesday,thursday,friday;
 
-        0 = sunday;
-        1 = monday;
-        2 = tuesday;
-        3 = wednesday;
-        4 = thursday;
-        5 = friday;
-        6 = saturday;
+        0 = saturday;
+        1 = sunday;
+        2 = monday;
+        3 = tuesday;
+        4 = wednesday;
+        5 = thursday;
+        6 = friday;
+
 
     }
 
