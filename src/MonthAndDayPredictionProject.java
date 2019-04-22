@@ -24,75 +24,139 @@ public class MonthAndDayPredictionProject {
 
 
         //Placeholder stuff
-        int a;
-        monthsCalculation(a);
+        monthsCalculation();
 
         Scanner repeat = new Scanner(System.in);
         int yes ;
         int no;
-        if(repeat==yes){}
+        boolean loop = true;
 
 
     }
 
 
     public static void monthsCalculation(){
-int m = 12;
-int q;
-String monthString;
+        int m = 13;
+        int q = 32;
+        String monthString = "Month";
 
 //Switch statements
-switch (m){
-    case 1:
-    monthString = "January";
-    break;
+        switch (m){
+            case 1:
+                monthString = "January";
+                break;
 
-    case 2:
-    monthString = "February";
-    break;
+            case 2:
+                monthString = "February";
+                break;
 
-    case 3:
-    monthString = "March";
-    break;
+            case 3:
+                monthString = "March";
+                break;
 
-    case 4:
-    monthString = "April";
-    break;
+            case 4:
+                monthString = "April";
+                break;
 
-    case 5:
-    monthString = "May";
-    break;
+            case 5:
+                monthString = "May";
+                break;
 
-    case 6:
-    monthString = "June";
-    break;
+            case 6:
+                monthString = "June";
+                break;
 
-    case 7:
-    monthString = "July";
+            case 7:
+                monthString = "July";
 
-    case 8:
-    monthString = "August";
-    break;
+            case 8:
+                monthString = "August";
+                break;
 
-    case 9 :
-    monthString = "September";
-    break;
+            case 9 :
+                monthString = "September";
+                break;
 
-    case 10:
-    monthString = "October";
-    break;
+            case 10:
+                monthString = "October";
+                break;
 
-    case 11:
-    monthString = "November";
-    break;
+            case 11:
+                monthString = "November";
+                break;
 
-    case 12:
-    monthString = "December";
-    break;
-}
+            case 12:
+                monthString = "December";
+                break;
+        }
+
+        switch (q){
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+        }
 
 
-return;
+
     }
 
 
@@ -130,7 +194,7 @@ return;
                 break;
 
             default:
-                dayString = "Invalid day";
+                System.out.print("The day that you have typed does not exist/nPlease try again!");
 
         }
 
@@ -168,7 +232,8 @@ return;
         else if(monthsCalculation();dayOfTheWeek()){
             System.out.println("But the child born on Sabbath day, is fair and wise and good in every way.");
         }
-    }
 
+
+    }
 
 }
