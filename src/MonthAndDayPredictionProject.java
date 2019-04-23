@@ -3,17 +3,17 @@ import java.util.Scanner;
 public class MonthAndDayPredictionProject {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //Variables
         int monthInput;
         int dayInput;
         int yearInput;
 
         //Scanner with the question prompts
-        Scanner userBirthDayInput = new Scanner (System.in);
+        Scanner userBirthDayInput = new Scanner(System.in);
 
         System.out.println("What month were you born?");
-        monthInput  = userBirthDayInput.nextInt();
+        monthInput = userBirthDayInput.nextInt();
 
         System.out.println("What day were you born?");
         dayInput = userBirthDayInput.nextInt();
@@ -22,150 +22,135 @@ public class MonthAndDayPredictionProject {
         yearInput = userBirthDayInput.nextInt();
 
 
-
         //Placeholder stuff
-        monthsCalculation();
+        //dayOfTheMonth();
+        dayOfTheWeek();
+        //poemDependingOnDay();
 
         Scanner repeat = new Scanner(System.in);
-        int yes ;
+        int yes;
         int no;
         boolean loop = true;
-
 
     }
 
 
-    public static void monthsCalculation(){
-        int m = 13;
-        int q = 32;
-        String monthString = "Month";
+    public static void dayOfTheMonth(Scanner monthAndDay) {
+        int month;
+        int numberOfDayInMonth;
+        int year;
+        int yearOfTheCentury;
 
-//Switch statements
-        switch (m){
+        month = 13;
+        numberOfDayInMonth = 32;
+
+        //Switch statements
+        switch (month) {
             case 1:
-                monthString = "January";
+                System.out.println("January");
                 break;
 
             case 2:
-                monthString = "February";
+                System.out.println("February");
                 break;
 
             case 3:
-                monthString = "March";
+                System.out.println("March");
                 break;
 
             case 4:
-                monthString = "April";
+                System.out.println("April");
                 break;
 
             case 5:
-                monthString = "May";
+                System.out.println("May");
                 break;
 
             case 6:
-                monthString = "June";
+                System.out.println("June");
                 break;
 
             case 7:
-                monthString = "July";
+                System.out.println("July");
 
             case 8:
-                monthString = "August";
+                System.out.println("August");
                 break;
 
-            case 9 :
-                monthString = "September";
+            case 9:
+                System.out.println("September");
                 break;
 
             case 10:
-                monthString = "October";
+                System.out.println("October");
                 break;
 
             case 11:
-                monthString = "November";
+                System.out.println("November");
                 break;
 
             case 12:
-                monthString = "December";
+                System.out.println("December");
                 break;
         }
 
-        switch (q){
+        switch (numberOfDayInMonth) {
             case 1:
-                break;
             case 2:
-                break;
             case 3:
-                break;
             case 4:
-                break;
             case 5:
-                break;
             case 6:
-                break;
             case 7:
-                break;
             case 8:
-                break;
             case 9:
-                break;
             case 10:
-                break;
             case 11:
-                break;
             case 12:
-                break;
             case 13:
-                break;
             case 14:
-                break;
             case 15:
-                break;
             case 16:
-                break;
             case 17:
-                break;
             case 18:
-                break;
             case 19:
-                break;
             case 20:
-                break;
             case 21:
-                break;
             case 22:
-                break;
             case 23:
-                break;
             case 24:
-                break;
             case 25:
-                break;
             case 26:
-                break;
             case 27:
-                break;
             case 28:
                 break;
             case 29:
-                break;
             case 30:
-                break;
             case 31:
                 break;
         }
 
 
+        /*switch (){
+        if(monthAndDay<=28) {
+            case 1:
+                System.out.println("January");
+
+
+        }
+        }*/
+
 
     }
 
 
-    public static int dayOfTheWeek(){
+    public static void dayOfTheWeek() {
         //The days of the week
-        int h = 7;
+        int dayOftTheWeek;
+        dayOftTheWeek = 7;
         String dayString;
 
-        switch (h) {
+        switch (dayOftTheWeek) {
             case 0:
                 dayString = "Saturday";
                 break;
@@ -194,46 +179,53 @@ public class MonthAndDayPredictionProject {
                 break;
 
             default:
-                System.out.print("The day that you have typed does not exist/nPlease try again!");
+                System.out.println("There is probably a bug here...\nBETTER FIX IT!");
+                break;
 
         }
-
-        return;
+    return;
     }
 
-    public static int poemDependingOnDay(){
+/*    public static String poemDependingOnDay() {
         //Poems according to date of birth
 
-        if(monthsCalculation();){
-            System.out.println("Monday's child is fair of face.");}
+        if ( dayOfTheMonth();){
+            System.out.println("Monday's child is fair of face.");
+        }
 
-        else if (monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("Tuesday's child is full of grace.");
 
         }
 
-        else if (monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("Wednesday's child is full of woe.");
 
         }
 
-        else if (monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("Thursday's child has far to go.");
         }
 
-        else if(monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("Friday's child loving and giving.");
         }
 
-        else if(monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("Saturday's child works hard for a living");
         }
 
-        else if(monthsCalculation();dayOfTheWeek()){
+        else if ( dayOfTheMonth();
+        dayOfTheWeek()){
             System.out.println("But the child born on Sabbath day, is fair and wise and good in every way.");
         }
 
 
-    }
+    }*/
 
 }
