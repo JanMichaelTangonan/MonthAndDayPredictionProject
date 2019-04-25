@@ -20,86 +20,74 @@ public class MonthAndDayPredictionProject {
 
         System.out.println("What year were you born?");
         yearInput = userBirthDayInput.nextInt();
+        
+                boolean loop = true;
 
         int h = dayOfTheWeek();
         int q = dayOfTheMonth();
         int m;
-        int K;
-        int J;
+        int K = yearInput%100;
+        int J = yearInput/100;
 
-        h=(q+13(m+1)/5+K+K/4+J/4-2J)%7;
-
-        poemDependingOnDay();
-
-
-
-        //Placeholder stuff
-        dayOfTheMonth();
-
-        //poemDependingOnDay();
-
-        Scanner repeat = new Scanner(System.in);
-        boolean loop = true;
+        h=(q+(13*(m+1)/5)+K+(K/4)+(J/4)-2*J)%7;
 
     }
-
-
-    public static int dayOfTheMonth(Scanner monthAndDay) {
+    
+    
+    public static int dayOfTheMonth() {
         int month;
         int daysInAMonth;
         int year;
         int yearOfTheCentury;
 
-        month = 13;
-        daysInAMonth = 13;
-
         //Switch statements
+        String NameOfMonth
         switch (month) {
             case 1:
-                System.out.println("January");
+                NameOfMonth = ("January");
                 break;
 
             case 2:
-                System.out.println("February");
+                NameOfMonth = ("February");
                 break;
 
             case 3:
-                System.out.println("March");
+                NameOfMonth = ("March");
                 break;
 
             case 4:
-                System.out.println("April");
+                NameOfMonth = ("April");
                 break;
 
             case 5:
-                System.out.println("May");
+                NameOfMonth = ("May");
                 break;
 
             case 6:
-                System.out.println("June");
+                NameOfMonth = ("June");
                 break;
 
             case 7:
-                System.out.println("July");
+                NameOfMonth = ("July");
 
             case 8:
-                System.out.println("August");
+                NameOfMonth = ("August");
                 break;
 
             case 9:
-                System.out.println("September");
+                NameOfMonth = ("September");
                 break;
 
             case 10:
-                System.out.println("October");
+                NameOfMonth = ("October");
                 break;
 
             case 11:
-                System.out.println("November");
+                NameOfMonth = ("November");
                 break;
 
             case 12:
-                System.out.println("December");
+                NameOfMonth = ("December");
                 break;
         }
 
@@ -120,7 +108,7 @@ public class MonthAndDayPredictionProject {
                 System.out.print("31 days");
                 break;
             case 2:
-                int february = 28;
+                int leapYear = 4%100;
                 if ((year % 4 == 0) && (year % 100 != 0) && (year%400!=0)){
                     System.out.print(year + "is a leap year");
 
@@ -136,13 +124,11 @@ public class MonthAndDayPredictionProject {
     }
 
 
-    public static int dayOfTheWeek() {
+    public static int dayOfTheWeek(int NameOfWeek) {
         //The days of the week
-        int dayOftTheWeek;
-        dayOftTheWeek = 7;
         String dayString;
 
-        switch (dayOftTheWeek) {
+        switch (NameOfWeek) {
             case 0:
                 dayString = "Sunday";
                 break;
