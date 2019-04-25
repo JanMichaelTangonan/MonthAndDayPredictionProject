@@ -21,28 +21,37 @@ public class MonthAndDayPredictionProject {
         System.out.println("What year were you born?");
         yearInput = userBirthDayInput.nextInt();
 
+        int h = dayOfTheWeek();
+        int q = dayOfTheMonth();
+        int m;
+        int K;
+        int J;
+
+        h=(q+13(m+1)/5+K+K/4+J/4-2J)%7;
+
+        poemDependingOnDay();
+
+
 
         //Placeholder stuff
-        //dayOfTheMonth();
-        dayOfTheWeek();
+        dayOfTheMonth();
+
         //poemDependingOnDay();
 
         Scanner repeat = new Scanner(System.in);
-        int yes;
-        int no;
         boolean loop = true;
 
     }
 
 
-    public static void dayOfTheMonth(Scanner monthAndDay) {
+    public static int dayOfTheMonth(Scanner monthAndDay) {
         int month;
-        int numberOfDayInMonth;
+        int daysInAMonth;
         int year;
         int yearOfTheCentury;
 
         month = 13;
-        numberOfDayInMonth = 32;
+        daysInAMonth = 13;
 
         //Switch statements
         switch (month) {
@@ -94,57 +103,40 @@ public class MonthAndDayPredictionProject {
                 break;
         }
 
-        switch (numberOfDayInMonth) {
-            case 1:
-            case 2:
-            case 3:
+        switch (daysInAMonth) {
+            case 9:
             case 4:
-            case 5:
             case 6:
+            case 11:
+                System.out.println("30 days");
+                break;
+            case 1:
+            case 3:
+            case 5:
             case 7:
             case 8:
-            case 9:
             case 10:
-            case 11:
             case 12:
-            case 13:
-            case 14:
-            case 15:
-            case 16:
-            case 17:
-            case 18:
-            case 19:
-            case 20:
-            case 21:
-            case 22:
-            case 23:
-            case 24:
-            case 25:
-            case 26:
-            case 27:
-            case 28:
+                System.out.print("31 days");
                 break;
-            case 29:
-            case 30:
-            case 31:
+            case 2:
+                int february = 28;
+                if ((year % 4 == 0) && (year % 100 != 0) && (year%400!=0)){
+                    System.out.print(year + "is a leap year");
+
+                }
+                else {
+                    System.out.println(year + "is NOT a leap year");
+
+                }
                 break;
-        }
-
-
-        /*switch (){
-        if(monthAndDay<=28) {
-            case 1:
-                System.out.println("January");
-
 
         }
-        }*/
-
 
     }
 
 
-    public static void dayOfTheWeek() {
+    public static int dayOfTheWeek() {
         //The days of the week
         int dayOftTheWeek;
         dayOftTheWeek = 7;
@@ -152,7 +144,7 @@ public class MonthAndDayPredictionProject {
 
         switch (dayOftTheWeek) {
             case 0:
-                dayString = "Saturday";
+                dayString = "Sunday";
                 break;
 
             case 1:
@@ -183,13 +175,11 @@ public class MonthAndDayPredictionProject {
                 break;
 
         }
-    return;
     }
 
-/*    public static String poemDependingOnDay() {
+    public static String poemDependingOnDay(){
         //Poems according to date of birth
-
-        if ( dayOfTheMonth();){
+       /* if ( dayOfTheMonth();){
             System.out.println("Monday's child is fair of face.");
         }
 
@@ -228,4 +218,33 @@ public class MonthAndDayPredictionProject {
 
     }*/
 
+
+        int poem =7;
+        switch (poem) {
+            case 0:
+                System.out.print("But the child born on Sabbath day, is fair and wise and good in every way");
+                break;
+            case 1:
+                System.out.println("Monday's child is fair of face.");
+                break;
+            case 2:
+                System.out.print("Tuesday's child is full of grace.");
+                break;
+            case 3:
+                System.out.print("Wednesday's child is full of woe.");
+                break;
+            case 4:
+                System.out.print("Thursday's child has far to go");
+                break;
+            case 5:
+                System.out.print("Friday's child is loving and giving.");
+                break;
+            case 6:
+                System.out.print("Saturday's child works hard for a living.");
+                break;
+
+        }
+
+        return;
+    }
 }
