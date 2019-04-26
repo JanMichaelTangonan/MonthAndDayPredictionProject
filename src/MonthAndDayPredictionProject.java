@@ -20,28 +20,35 @@ public class MonthAndDayPredictionProject {
 
         System.out.println("What year were you born?");
         yearInput = userBirthDayInput.nextInt();
-        
-                boolean loop = true;
 
-        int h = dayOfTheWeek();a
-        int q = dayOfTheMonth();
-        int m = ;
-        int K = yearInput%100;
-        int J = yearInput/100;
+        boolean loop = true;
+        return;
 
-        h=(q+(13*(m+1)/5)+K+(K/4)+(J/4)-2*J)%7;
 
     }
-    
-    
-    public static int dayOfTheMonth(int month) {
-        
+
+    public static int equations() {
+        int month;
+        int day;
+        int year = ;
+
+        int q = dayOfTheMonth();
+        int m =
+        int K = year % 100;
+        int J = year / 100;
+        int h = (q + (13 * (m + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
+
+    }
+
+
+    public static int dayOfTheMonth(int month, int yeet) {
+
         int daysInAMonth;
         int year;
         int yearOfTheCentury;
 
         //Switch statements
-        String NameOfMonth
+        String NameOfMonth;
         switch (month) {
             case 1:
                 NameOfMonth = ("January");
@@ -91,6 +98,9 @@ public class MonthAndDayPredictionProject {
                 break;
         }
 
+
+
+
         switch (daysInAMonth) {
             case 9:
             case 4:
@@ -108,12 +118,11 @@ public class MonthAndDayPredictionProject {
                 System.out.print("31 days");
                 break;
             case 2:
-                int leapYear = 4%100;
-                if ((year % 4 == 0) && (year % 100 != 0) && (year%400!=0)){
+                int leapYear = 4 % 100;
+                if ((year % 4 == 0) && (year % 100 != 0) && (year % 400 != 0)) {
                     System.out.print(year + "is a leap year");
 
-                }
-                else {
+                } else {
                     System.out.println(year + "is NOT a leap year");
 
                 }
@@ -163,49 +172,9 @@ public class MonthAndDayPredictionProject {
         }
     }
 
-    public static String poemDependingOnDay(){
+    public static int poemDependingOnDay(int poem) {
         //Poems according to date of birth
-       /* if ( dayOfTheMonth();){
-            System.out.println("Monday's child is fair of face.");
-        }
 
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("Tuesday's child is full of grace.");
-
-        }
-
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("Wednesday's child is full of woe.");
-
-        }
-
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("Thursday's child has far to go.");
-        }
-
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("Friday's child loving and giving.");
-        }
-
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("Saturday's child works hard for a living");
-        }
-
-        else if ( dayOfTheMonth();
-        dayOfTheWeek()){
-            System.out.println("But the child born on Sabbath day, is fair and wise and good in every way.");
-        }
-
-
-    }*/
-
-
-        int poem =7;
         switch (poem) {
             case 0:
                 System.out.print("But the child born on Sabbath day, is fair and wise and good in every way");
@@ -231,6 +200,6 @@ public class MonthAndDayPredictionProject {
 
         }
 
-        return;
+        return poem;
     }
 }
