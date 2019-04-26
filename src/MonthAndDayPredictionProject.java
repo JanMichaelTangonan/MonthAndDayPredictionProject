@@ -23,9 +23,9 @@ public class MonthAndDayPredictionProject {
         
                 boolean loop = true;
 
-        int h = dayOfTheWeek();
+        int h = dayOfTheWeek();a
         int q = dayOfTheMonth();
-        int m;
+        int m = ;
         int K = yearInput%100;
         int J = yearInput/100;
 
