@@ -34,8 +34,8 @@ public class MonthAndDayPredictionProject {
     }
     
     
-    public static int dayOfTheMonth() {
-        int month;
+    public static int dayOfTheMonth(int month) {
+        
         int daysInAMonth;
         int year;
         int yearOfTheCentury;
