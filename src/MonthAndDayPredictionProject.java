@@ -9,9 +9,16 @@ public class MonthAndDayPredictionProject {
         int dayInput;
         int yearInput;
 
-        //Scanner with the question prompts
+        //Scanner
         Scanner userBirthDayInput = new Scanner(System.in);
 
+        //Introduction
+        System.out.println("There is an old nursery rhyme that goes like this...\n" + "Monday's child is fair of face\n" + 
+                           "Tuesday's child is full of grace/n" + "Wednesday's child is full of woe\n" + "Thursday's child has far to go\n"
+                           + "Friday's child is loving and giving\n + Saturday's child is loving and giving\n" + "But the child born on the Sabbath Day, Is fair and wise and good in every way\n"
+                          + "\n" + "Let's find out which of the poems corresponds with your birthday!" )
+        
+        //Question prompts
         System.out.println("What month were you born?");
         monthInput = userBirthDayInput.nextInt();
 
@@ -27,10 +34,7 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int equations() {
-        int month;
-        int day;
-        int year = ;
+    public static int equations(int month, int day, int year) {
 
         int q = dayOfTheMonth();
         int m =
@@ -38,16 +42,18 @@ public class MonthAndDayPredictionProject {
         int J = year / 100;
         int h = (q + (13 * (m + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
 
-    }
+    
+    return month,day,year;}
 
 
-    public static int dayOfTheMonth(int month, int yeet) {
+    public static int dayOfTheMonth(int month, int daysInAMonth) {
 
-        int daysInAMonth;
         int year;
         int yearOfTheCentury;
 
         //Switch statements
+        
+        //Month
         String NameOfMonth;
         switch (month) {
             case 1:
@@ -101,6 +107,7 @@ public class MonthAndDayPredictionProject {
 
 
 
+        //Day of the month
         switch (daysInAMonth) {
             case 9:
             case 4:
