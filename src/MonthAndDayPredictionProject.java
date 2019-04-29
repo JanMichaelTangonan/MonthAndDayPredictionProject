@@ -34,7 +34,7 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int equations(int month, int day, int year) {
+    public static int calculations(int month, int day, int year) {
 
         int q = dayOfTheMonth();
         int m =
