@@ -7,7 +7,7 @@ public class MonthAndDayPredictionProject {
         //Variables
         int m; //monthInput
         int q; //dayInput
-        int yearInput;
+        int yearInput;//Year input
         int thePoem;
         boolean loop = true;
 
@@ -22,23 +22,29 @@ public class MonthAndDayPredictionProject {
                     + "\n" + "Let's find out which of the poems corresponds with your birthday!");
 
             //Question prompts
-            System.out.println("What month were you born?");
+            do{System.out.println("What month were you born?");
             m = userBirthDayInput.nextInt();
-            if (m<=12){
-                System.out.print(m);
-            }
+              }while (m<=1 || m>=31)
 
-            System.out.println("What day were you born?");
+            do{System.out.println("What day were you born?");
             q = userBirthDayInput.nextInt();
+              }while (q<=1 || q>=31)
 
             System.out.println("What year were you born?");
             yearInput = userBirthDayInput.nextInt();
+            int theYear = calculations (int month,int day,int year)
+              
+            //Results
+            String months = monthOfBirth(month)
+            System.out.println("According to your input you were born in " + months + q + yearInput)    
 
-
-
+            String dayOfweek = dayOfTheweek(theWeek);
+            System.out.println("According to your input you were born on a " + dayOfweek)
 
             poemDependingOnDay(thePoem);
-            System.out.print("Poem");
+            System.out.println("Your birthday states that" + thePoem)
+                
+            System.out.println("You have reached the end of the program. Please type another birthdate :D!")   
 
         }
 
@@ -46,21 +52,25 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int calculations(int month, int day, int year, int yearOfTheCentury, int zeroBasedCentury, int h) {
-
-        int q = dayOfTheMonth(day);
+    public static int calculations(int month, int q, int year) {
+        
+        if (month ==1 || m==2){
+        month = month +12;
+        year = year-1    
+        }
         int K = year % 100;
         int J = year / 100;
-        h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
+        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
 
 
-        return month;
+        return h;
     }
 
 
     public static int dayOfTheMonth(int daysInAMonth) {
 
         int year;
+        int leapYear = year/400
 
         //Day of the month
         switch (daysInAMonth) {
@@ -80,21 +90,21 @@ public class MonthAndDayPredictionProject {
                 System.out.print("31 days");
                 break;
             case 2:
-                if(year%4 || year/4){
+                if(leapYear = 0){
 
-                    System.out.println("Which is a leap year");
+                    System.out.println("29");
                 }
 
                 else{
 
-                    System.out.println("Which is NOT a leap year");
+                    System.out.println("28");
                 }
 
         }
 
     }
 
-    public static int months(int month){
+    public static int monthOfBirth(int month){
 
         //Month
         String NameOfMonth;
@@ -148,6 +158,8 @@ public class MonthAndDayPredictionProject {
 
             default:
                 System.out.print("Invalid date.");
+                
+                return NameOfMonth;
         }
 
 
