@@ -5,14 +5,12 @@ public class MonthAndDayPredictionProject {
 
     public static void main(String[] args) {
         //Variables
-        int m; //monthInput
-        int q; //dayInput
+        int m;//monthInput
+        int q;//dayInput
         int yearInput;//Year input
-        int month;
-        int day;
-        int year;
-        int theWeek;
-        int thePoem;
+        int daysInAMonth;//Tells how many days are in the month that was given
+        int theWeek = dayOfTheWeek(1);//The day of the week that the user was born in.
+        int thePoem = poemDependingOnDay();//The poem depending on the users birthday.
         boolean loop = true;
 
         //Scanner
@@ -36,19 +34,17 @@ public class MonthAndDayPredictionProject {
 
             System.out.println("What year were you born? (Please type 4 digits)");
             yearInput = userBirthDayInput.nextInt();
-            int theYear = calculations (month,day,year);
               
             //Results
-            String months = monthOfBirth(month);
-            System.out.println("According to your input you were born in " + months + q + yearInput);    
+            System.out.println("According to your input you were born in " + m + q + yearInput);
 
-            String dayOfweek = dayOfTheweek(theWeek);
-            System.out.println("According to your input you were born on a " + dayOfweek);
+            System.out.println("There are " + dayOfTheMonth( m,yearInput));
 
-            poemDependingOnDay(thePoem);
+            System.out.println("According to your input you were born on a " + theWeek);
+
             System.out.println("Your birthday states that" + thePoem);
                 
-            System.out.println("You have reached the end of the program. Please type another birthdate :D!");   
+            System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
         }
 
@@ -56,7 +52,7 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int calculations(int month, int q, int year) {
+    public static int calculations(int month, int q, int year, int h) {
         
         if (month ==1 || month==2){
         month = month +12;
@@ -64,26 +60,26 @@ public class MonthAndDayPredictionProject {
         }
         int K = year % 100;
         int J = year / 100;
-        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
+        h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
 
 
         return h;
     }
 
 
-    public static int dayOfTheMonth(int daysInAMonth) {
+    public static int dayOfTheMonth(int month, int year) {
 
-        int year;
-        int leapYear = year/400;
+
+        int leapYear = year/400;//*Check if correct, unsure if right please check*
 
         //Day of the month
-        switch (daysInAMonth) {
+        switch (month) {
             case 9:
             case 4:
             case 6:
             case 11:
-                System.out.println("30 days");
-                break;
+               return 30;
+
             case 1:
             case 3:
             case 5:
@@ -91,18 +87,20 @@ public class MonthAndDayPredictionProject {
             case 8:
             case 10:
             case 12:
-                System.out.print("31 days");
-                break;
+                return 31;
+
             case 2:
                 if(leapYear == 0){
 
-                    System.out.println("29");
+                    return 29;
                 }
 
                 else{
 
-                    System.out.println("28");
+                    return  28;
                 }
+            default:
+                return -1;
 
         }
 
@@ -163,7 +161,7 @@ public class MonthAndDayPredictionProject {
             default:
                 System.out.print("Invalid date.");
                 
-                return NameOfMonth;
+                return month;
         }
 
 
@@ -173,34 +171,33 @@ public class MonthAndDayPredictionProject {
 
     public static int dayOfTheWeek(int NameOfWeek) {
         //The days of the week
-        String dayString;
 
         switch (NameOfWeek) {
             case 0:
-                dayString = "Sunday";
+                System.out.println("Sunday");
                 break;
 
             case 1:
-                dayString = "Monday";
+                System.out.println("Monday");
                 break;
 
             case 2:
-                dayString = "Tuesday";
-
+                System.out.println("Tuesday");
+                break;
             case 3:
-                dayString = "Wednesday";
+                System.out.println("Wednesday");
                 break;
 
             case 4:
-                dayString = "Thursday";
+                System.out.println("Thursday");
                 break;
 
             case 5:
-                dayString = "Friday";
+                System.out.println("Friday");
                 break;
 
             case 6:
-                dayString = "Saturday";
+                System.out.println("Saturday");
                 break;
 
             default:
@@ -208,6 +205,8 @@ public class MonthAndDayPredictionProject {
                 break;
 
         }
+
+    return NameOfWeek;
     }
 
     public static int poemDependingOnDay(int poem) {
