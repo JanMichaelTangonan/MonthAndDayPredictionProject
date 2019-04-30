@@ -9,8 +9,9 @@ public class MonthAndDayPredictionProject {
         int q;//dayInput
         int yearInput;//Year input
         int daysInAMonth;//Tells how many days are in the month that was given
-        int theWeek = dayOfTheWeek(1);//The day of the week that the user was born in.
-        int thePoem = poemDependingOnDay();//The poem depending on the users birthday.
+        int nameOfMonth;//The name of the month
+        int nameOfWeek;//The day of the week that the user was born in.
+        int thePoem ;//The poem depending on the users birthday.
         boolean loop = true;
 
         //Scanner
@@ -38,11 +39,11 @@ public class MonthAndDayPredictionProject {
             //Results
             System.out.println("According to your input you were born in " + m + q + yearInput);
 
-            System.out.println("There are " + dayOfTheMonth( m,yearInput));
+            System.out.println("There are " + dayOfTheMonth( m,yearInput) + "days in " + monthOfBirth(nameOfMonth));
 
-            System.out.println("According to your input you were born on a " + theWeek);
+            System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
 
-            System.out.println("Your birthday states that" + thePoem);
+            System.out.println("Your birthday states that " + poemDependingOnDay(thePoem));
                 
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
@@ -92,12 +93,12 @@ public class MonthAndDayPredictionProject {
             case 2:
                 if(leapYear == 0){
 
-                    return 29;
+                    return 28;
                 }
 
                 else{
 
-                    return  28;
+                    return  29;
                 }
             default:
                 return -1;
@@ -109,54 +110,47 @@ public class MonthAndDayPredictionProject {
     public static int monthOfBirth(int month){
 
         //Month
-        String NameOfMonth;
         switch (month) {
             case 1:
-                NameOfMonth = ("January");
-                break;
+                return ("January");
+                
 
             case 2:
-                NameOfMonth = ("February");
-                break;
+                return ("February");
+                
 
             case 3:
-                NameOfMonth = ("March");
-                break;
+                return ("March");
+               
 
             case 4:
-                NameOfMonth = ("April");
-                break;
+                return ("April");
+                
 
             case 5:
-                NameOfMonth = ("May");
-                break;
+                return ("May");
 
             case 6:
-                NameOfMonth = ("June");
-                break;
+                return ("June");
+                
 
             case 7:
-                NameOfMonth = ("July");
+                return ("July");
 
             case 8:
-                NameOfMonth = ("August");
-                break;
+                return ("August");
 
             case 9:
-                NameOfMonth = ("September");
-                break;
+                return ("September");
 
             case 10:
-                NameOfMonth = ("October");
-                break;
+                return ("October");
 
             case 11:
-                NameOfMonth = ("November");
-                break;
+                return ("November");
 
             case 12:
-                NameOfMonth = ("December");
-                break;
+                return ("December");
 
             default:
                 System.out.print("Invalid date.");
@@ -168,7 +162,54 @@ public class MonthAndDayPredictionProject {
 
     }
 
-
+    public static int numberOfMonthForCalculations(numMonth){
+        
+        //Return the correct number of the months in order to execute a proper calculation
+        switch(numMonth){
+        case 1:
+        return 13;
+        
+        case 2:
+        return 14;
+            
+        case 3:
+        return 3;
+            
+        case 4:
+        return 4;
+        
+        case 5:
+        return 5;
+        
+        case 6:
+        return 6;
+        
+        case 7:
+        return 7;
+        
+        case 8:
+        return 8;
+            
+        case 9:
+        return 9;
+                
+        case 10:
+        return 10;
+                
+        case 11:
+        return 11;
+                
+        case 12:
+        return 12;
+                
+        default:
+        return "Error";
+    
+        }
+    
+    }
+    
+    
     public static int dayOfTheWeek(int NameOfWeek) {
         //The days of the week
 
