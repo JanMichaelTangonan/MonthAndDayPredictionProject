@@ -27,6 +27,16 @@ public class MonthAndDayPredictionProject {
             //Question prompts
             do{System.out.println("What month were you born?");
             m = userBirthDayInput.nextInt();
+              
+            if(m==1){
+            m = 13;
+            year--;    
+            }
+               
+            else if(m==2){
+            m = 14;
+            year--;
+            }   
               }while (m<=1 || m>=31);
 
             do{System.out.println("What day were you born?");
@@ -40,6 +50,8 @@ public class MonthAndDayPredictionProject {
             System.out.println("According to your input you were born in " + m + q + yearInput);
 
             System.out.println("There are " + dayOfTheMonth( m,yearInput) + "days in " + monthOfBirth(nameOfMonth));
+
+            int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
 
             System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
 
@@ -61,7 +73,7 @@ public class MonthAndDayPredictionProject {
         }
         int K = year % 100;
         int J = year / 100;
-        h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - 2 * J) % 7;
+        h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
 
 
         return h;
@@ -162,7 +174,7 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int numberOfMonthForCalculations(numMonth){
+    /*public static int numberOfMonthForCalculations(numMonth){
         
         //Return the correct number of the months in order to execute a proper calculation
         switch(numMonth){
@@ -207,7 +219,7 @@ public class MonthAndDayPredictionProject {
     
         }
     
-    }
+    }*/
     
     
     public static int dayOfTheWeek(int NameOfWeek) {
