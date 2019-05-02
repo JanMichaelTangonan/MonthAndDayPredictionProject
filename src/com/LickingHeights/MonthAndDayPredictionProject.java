@@ -73,7 +73,7 @@ public class MonthAndDayPredictionProject {
     public static int calculations(int month, int q, int year) {
         
         if (month ==1 || month==2){
-        month = numberOfMonthForCalculations(month)
+        month = numberOfMonthForCalculations(month);
         year = year-1;    
         }
         int K = year % 100;
