@@ -9,11 +9,10 @@ public class MonthAndDayPredictionProject {
         int m;//monthInput
         int q;//dayInput
         int yearInput ;//Year input
-        int daysInAMonth;//Tells how many days are in the month that was given
-        int nameOfMonth;//The name of the month
+        int nameOfMonth = 7;//The name of the month
         int h;
-        int nameOfWeek;//The day of the week that the user was born in.
-        int thePoem ;//The poem depending on the users birthday.
+        int nameOfWeek = 0;//The day of the week that the user was born in.
+        int thePoem = 0 ;//The poem depending on the users birthday.
 
         boolean loop = true;
 
@@ -23,15 +22,15 @@ public class MonthAndDayPredictionProject {
         while(loop){
             //Introduction
             System.out.println("There is an old nursery rhyme that goes like this...\n" + "Monday's child is fair of face\n" +
-                    "Tuesday's child is full of grace/n" + "Wednesday's child is full of woe\n" + "Thursday's child has far to go\n"
-                    + "Friday's child is loving and giving\n + Saturday's child is loving and giving\n" + "But the child born on the Sabbath Day, Is fair and wise and good in every way\n"
+                    "Tuesday's child is full of grace\n" + "Wednesday's child is full of woe\n" + "Thursday's child has far to go\n"
+                    + "Friday's child is loving and giving\n" + "Saturday's child is loving and giving\n" + "But the child born on the Sabbath Day, Is fair and wise and good in every way\n"
                     + "\n" + "Let's find out which of the poems corresponds with your birthday!");
 
             //Question prompts
             do{System.out.println("What month were you born?");
             m = userBirthDayInput.nextInt();
 
-            }while (m<=1 || m>=31);
+            }while (m<=1 || m>=12);
 
 
             do{System.out.println("What day were you born?");
@@ -44,7 +43,7 @@ public class MonthAndDayPredictionProject {
               
             //Results
 
-            if(m==1){
+            /*if(m==1){
                 m = 13;
                 yearInput--;
             }
@@ -52,13 +51,13 @@ public class MonthAndDayPredictionProject {
             else if(m==2){
                 m = 14;
                 yearInput--;
-            }
+            }*/
 
-            System.out.println("There are " + dayOfTheMonth( m,yearInput) + "days in " + monthOfBirth(nameOfMonth));
-
-            System.out.println("According to your input you were born in " + m + q + yearInput);
+            System.out.println("There are " + dayOfTheMonth( m,yearInput) + " days in " + monthOfBirth(nameOfMonth));
 
             h = calculations(m,q,yearInput);
+
+            System.out.println("According to your input you were born in " + m + ","+ q+ ","  + yearInput );
 
             System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
 
@@ -66,7 +65,7 @@ public class MonthAndDayPredictionProject {
                 
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
-
+            System.out.println("");
 
 
 
@@ -84,7 +83,7 @@ public class MonthAndDayPredictionProject {
         }
         int K = year % 100;
         int J = year / 100;
-        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
+        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5* J) % 7;
 
 
         return h;
@@ -155,7 +154,7 @@ public class MonthAndDayPredictionProject {
 
             case 6:
                 return ("June");
-                
+
 
             case 7:
                 return ("July");
@@ -279,25 +278,25 @@ public class MonthAndDayPredictionProject {
 
         switch (poem) {
             case 0:
-                System.out.print("But the child born on Sabbath day, is fair and wise and good in every way");
+                System.out.print("But the child born on Sabbath day, is fair and wise and good in every way. ");
                 break;
             case 1:
-                System.out.println("Monday's child is fair of face.");
+                System.out.println("Monday's child is fair of face. ");
                 break;
             case 2:
-                System.out.print("Tuesday's child is full of grace.");
+                System.out.print("Tuesday's child is full of grace. ");
                 break;
             case 3:
-                System.out.print("Wednesday's child is full of woe.");
+                System.out.print("Wednesday's child is full of woe. ");
                 break;
             case 4:
-                System.out.print("Thursday's child has far to go");
+                System.out.print("Thursday's child has far to go. ");
                 break;
             case 5:
-                System.out.print("Friday's child is loving and giving.");
+                System.out.print("Friday's child is loving and giving. ");
                 break;
             case 6:
-                System.out.print("Saturday's child works hard for a living.");
+                System.out.print("Saturday's child works hard for a living. ");
                 break;
 
         }
