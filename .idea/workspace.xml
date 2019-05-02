@@ -18,8 +18,8 @@
       <file leaf-file-name="MonthAndDayPredictionProject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MonthAndDayPredictionProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -55,7 +55,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -73,6 +72,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -95,7 +95,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MonthAndDayPredictionProject (1)">
+    <configuration name="MonthAndDayPredictionProject (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.LickingHeights.MonthAndDayPredictionProject" />
+      <module name="MonthAndDayPredictionProject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.LickingHeights.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="MonthAndDayPredictionProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MonthAndDayPredictionProject" />
       <module name="MonthAndDayPredictionProject" />
@@ -152,8 +163,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.MonthAndDayPredictionProject" />
+      <item itemvalue="Application.MonthAndDayPredictionProject (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MonthAndDayPredictionProject (1)" />
         <item itemvalue="Application.MonthAndDayPredictionProject" />
       </list>
     </recent_temporary>
@@ -212,6 +228,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MonthAndDayPredictionProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MonthAndDayPredictionProject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
@@ -291,8 +314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MonthAndDayPredictionProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>

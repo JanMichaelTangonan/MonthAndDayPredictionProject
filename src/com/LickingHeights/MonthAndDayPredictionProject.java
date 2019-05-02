@@ -1,3 +1,4 @@
+package com.LickingHeights;
 import java.util.Scanner;
 
 public class MonthAndDayPredictionProject {
@@ -7,11 +8,13 @@ public class MonthAndDayPredictionProject {
         //Variables
         int m;//monthInput
         int q;//dayInput
-        int yearInput;//Year input
+        int yearInput ;//Year input
         int daysInAMonth;//Tells how many days are in the month that was given
         int nameOfMonth;//The name of the month
+        int h;
         int nameOfWeek;//The day of the week that the user was born in.
         int thePoem ;//The poem depending on the users birthday.
+
         boolean loop = true;
 
         //Scanner
@@ -27,31 +30,35 @@ public class MonthAndDayPredictionProject {
             //Question prompts
             do{System.out.println("What month were you born?");
             m = userBirthDayInput.nextInt();
-              
-            if(m==1){
-            m = 13;
-            year--;    
-            }
-               
-            else if(m==2){
-            m = 14;
-            year--;
-            }   
-              }while (m<=1 || m>=31);
+
+            }while (m<=1 || m>=31);
+
 
             do{System.out.println("What day were you born?");
             q = userBirthDayInput.nextInt();
-              }while (q<=1 || q>=31);
+
+            }while (q<=1 || q>=31);
 
             System.out.println("What year were you born? (Please type 4 digits)");
             yearInput = userBirthDayInput.nextInt();
               
             //Results
-            System.out.println("According to your input you were born in " + m + q + yearInput);
+
+            if(m==1){
+                m = 13;
+                yearInput--;
+            }
+
+            else if(m==2){
+                m = 14;
+                yearInput--;
+            }
 
             System.out.println("There are " + dayOfTheMonth( m,yearInput) + "days in " + monthOfBirth(nameOfMonth));
 
-            int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
+            System.out.println("According to your input you were born in " + m + q + yearInput);
+
+            h = calculations(m,q,yearInput);
 
             System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
 
@@ -59,13 +66,17 @@ public class MonthAndDayPredictionProject {
                 
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
-        }
+
+
+
+
+        }while (loop = true);
 
 
 
     }
 
-    public static int calculations(int month, int q, int year, int h) {
+    public static int calculations(int month, int q, int year) {
         
         if (month ==1 || month==2){
         month = month +12;
@@ -73,7 +84,7 @@ public class MonthAndDayPredictionProject {
         }
         int K = year % 100;
         int J = year / 100;
-        h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
+        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
 
 
         return h;
@@ -119,7 +130,7 @@ public class MonthAndDayPredictionProject {
 
     }
 
-    public static int monthOfBirth(int month){
+    public static String monthOfBirth(int month){
 
         //Month
         switch (month) {
@@ -166,15 +177,15 @@ public class MonthAndDayPredictionProject {
 
             default:
                 System.out.print("Invalid date.");
-                
-                return month;
+
+
         }
 
-
+        return String.valueOf(month);
 
     }
 
-    /*public static int numberOfMonthForCalculations(numMonth){
+    /*public static int numberOfMonthForCalculations(int numMonth){
         
         //Return the correct number of the months in order to execute a proper calculation
         switch(numMonth){
@@ -215,8 +226,9 @@ public class MonthAndDayPredictionProject {
         return 12;
                 
         default:
-        return "Error";
+        return 0;
     
+
         }
     
     }*/
