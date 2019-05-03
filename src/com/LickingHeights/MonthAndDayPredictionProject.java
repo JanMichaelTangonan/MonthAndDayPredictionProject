@@ -74,7 +74,7 @@ public class MonthAndDayPredictionProject {
         }
         int K = year % 100;
         int J = year / 100;
-        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) - (2* J)) % 7;
+        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5* J)) % 7;
 
 
         return h;
