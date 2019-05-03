@@ -8,10 +8,9 @@ public class MonthAndDayPredictionProject {
         //Variables
         int m;//monthInput
         int q;//dayInput
-        int yearInput ;//Year input
-        int h;//The day of the week equation
-        int nameOfWeek;//The day of the week that the user was born in.
-        int thePoem;//The poem depending on the users birthday.
+        int yearInput;//Year input
+        int nameOfWeek= 0;//The day of the week that the user was born in.
+        int thePoem= 0;//The poem depending on the users birthday.*/
 
         boolean loop = true;
 
@@ -27,38 +26,35 @@ public class MonthAndDayPredictionProject {
 
             //Question prompts
             do{System.out.println("What month were you born?");
-            m = userBirthDayInput.nextInt();
+                m = userBirthDayInput.nextInt();
 
             }while (m<=1 || m>=12);
 
 
             do{System.out.println("What day were you born?");
-            q = userBirthDayInput.nextInt();
+                q = userBirthDayInput.nextInt();
 
             }while (q<=1 || q>=31);
 
             System.out.println("What year were you born? (Please type 4 digits)");
             yearInput = userBirthDayInput.nextInt();
-              
-            
-           //Results
-            
-            System.out.println("There are " + dayOfTheMonth( m,yearInput) + " days in " + monthOfBirth(m));
 
-            h = calculations(m,q,yearInput);
+
+            //Results
+
+            int h =calculations(m,q,yearInput);
+
+            System.out.println("There are " + dayOfTheMonth( m,yearInput) + " days in " + monthOfBirth(m));
 
             System.out.println("According to your input you were born in " + monthOfBirth(m) + ","+ q+ ","  + yearInput );
 
-            dayOfTheWeek(nameOfWeek);
-            String dayOfWeekInWords = dayOfTheWeek(nameOfWeek);
-            
-            System.out.println("According to your input you were born on a " + dayOfWeekInWords);
+            System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
 
-            poemDependingOnDay(thePoem);
-            String poemDependingOnDayInWords = poemDependingOnDay(thePoem);
-            System.out.println("Your birthday states that " + poemDependingOnDayInWords);
-                
+            System.out.println("Your birthday states that " + poemDependingOnDay(thePoem));
+
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
+
+            System.out.println("----------END----------");
 
             System.out.println("");
 
@@ -71,10 +67,10 @@ public class MonthAndDayPredictionProject {
     }
 
     public static int calculations(int month, int q, int year) {
-        
-        if (month ==1 || month==2){
-        month = numberOfMonthForCalculations(month);
-        year = year-1;    
+
+        if (month<=2){
+            month = numberOfMonthForCalculations(month);
+            year = year-1;
         }
         int K = year % 100;
         int J = year / 100;
@@ -96,7 +92,7 @@ public class MonthAndDayPredictionProject {
             case 4:
             case 6:
             case 11:
-               return 30;
+                return 30;
 
             case 1:
             case 3:
@@ -110,27 +106,30 @@ public class MonthAndDayPredictionProject {
             case 2:
                 if(year % 4 == 0){
 
-                 if(year%100 == 0){
-                     
-                     if(year%400 == 0)
-                         return 29;
-                     
-                     else{
-                     
-                     return 28;}
-                 }else {
-                     
-                     return 28;}
-                    
+                    if(year%100 == 0){
+
+                        if(year%400 == 0)
+                            return 29;
+
+                        else{
+
+                            return 28;}
+                    }else {
+
+                        return 28;}
+
                 }else
-                    return 28;}
-        
-        default:
-            return -1;
-                     
+                    return 28;
+
+            default:
+
         }
+
         return year;
     }
+
+
+
 
     public static String monthOfBirth(int month){
 
@@ -138,19 +137,19 @@ public class MonthAndDayPredictionProject {
         switch (month) {
             case 1:
                 return ("January");
-                
+
 
             case 2:
                 return ("February");
-                
+
 
             case 3:
                 return ("March");
-               
+
 
             case 4:
                 return ("April");
-                
+
 
             case 5:
                 return ("May");
@@ -188,58 +187,58 @@ public class MonthAndDayPredictionProject {
     }
 
     public static int numberOfMonthForCalculations(int numMonth){
-        
+
         //Return the correct number of the months in order to execute a proper calculation
         switch(numMonth){
-        case 1:
-        return 13;
-        
-        case 2:
-        return 14;
-            
-        case 3:
-        return 3;
-            
-        case 4:
-        return 4;
-        
-        case 5:
-        return 5;
-        
-        case 6:
-        return 6;
-        
-        case 7:
-        return 7;
-        
-        case 8:
-        return 8;
-            
-        case 9:
-        return 9;
-                
-        case 10:
-        return 10;
-                
-        case 11:
-        return 11;
-                
-        case 12:
-        return 12;
-                
-        default:
-        return 0;
-    
+            case 1:
+                return 13;
+
+            case 2:
+                return 14;
+
+            case 3:
+                return 3;
+
+            case 4:
+                return 4;
+
+            case 5:
+                return 5;
+
+            case 6:
+                return 6;
+
+            case 7:
+                return 7;
+
+            case 8:
+                return 8;
+
+            case 9:
+                return 9;
+
+            case 10:
+                return 10;
+
+            case 11:
+                return 11;
+
+            case 12:
+                return 12;
+
+            default:
+                return 0;
+
 
         }
-    
+
     }
-    
-    
-    public static int dayOfTheWeek(int NameOfWeek) {
+
+
+    public static int dayOfTheWeek(int nameOfWeek) {
         //The days of the week
 
-        switch (NameOfWeek) {
+        switch (nameOfWeek) {
             case 0:
                 System.out.println("Sunday");
                 break;
@@ -273,7 +272,7 @@ public class MonthAndDayPredictionProject {
 
         }
 
-    return NameOfWeek;
+        return nameOfWeek;
     }
 
     public static int poemDependingOnDay(int poem) {
@@ -284,7 +283,7 @@ public class MonthAndDayPredictionProject {
                 System.out.print("You are born on Sabbath day, and is fair and wise and good in every way. ");
                 break;
             case 1:
-                System.out.println("You are fair of good looking. ");
+                System.out.println("You are good looking. ");
                 break;
             case 2:
                 System.out.print("You are full of grace. ");
@@ -307,3 +306,4 @@ public class MonthAndDayPredictionProject {
         return poem;
     }
 }
+
