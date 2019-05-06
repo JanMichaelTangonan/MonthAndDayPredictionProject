@@ -47,7 +47,7 @@ public class MonthAndDayPredictionProject {
 
             System.out.println("According to your input you were born on a " + dayOfTheWeek(calculations(m,q,yearInput)));
 
-            System.out.println(poemDependingOnDay(calculations(m,q,yearInput)) + " Is the poem that describes you.");
+            System.out.println("According to your input "+poemDependingOnDay(calculations(m,q,yearInput)));
 
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
@@ -229,35 +229,35 @@ public class MonthAndDayPredictionProject {
 
         switch (nameOfWeek) {
             case 0:
-                System.out.println("Saturday");
-                break;
+                return ("Saturday");
+                
 
             case 1:
-                System.out.println("Sunday");
-                break;
+                return ("Sunday");
+                
 
             case 2:
-                System.out.println("Monday");
-                break;
+                return ("Monday");
+                
             case 3:
-                System.out.println("Tuesday");
-                break;
+                return ("Tuesday");
+                
 
             case 4:
-                System.out.println("Wednesday");
-                break;
+                return ("Wednesday");
+                
 
             case 5:
-                System.out.println("Thursday");
-                break;
+                return("Thursday");
+                
 
             case 6:
-                System.out.println("Friday");
-                break;
+                return ("Friday");
+                
 
             default:
-                System.out.println("There is probably a bug here...\nBETTER FIX IT!");
-                break;
+                return ("There is probably a bug here...\nBETTER FIX IT!");
+                
 
         }
 
@@ -269,26 +269,26 @@ public class MonthAndDayPredictionProject {
 
         switch (poem) {
             case 0:
-                System.out.print("You are born on Sabbath day, and is fair and wise and good in every way. ");
-                break;
+                return ("You are born on Sabbath day, and is fair and wise and good in every way. ");
+                
             case 1:
-                System.out.println("You are good looking. ");
-                break;
+                return ("You are good looking. ");
+                
             case 2:
-                System.out.print("You are full of grace. ");
-                break;
+                return ("You are full of grace. ");
+                
             case 3:
-                System.out.print("You are full of woe. ");
-                break;
+                return ("You are full of woe. ");
+                
             case 4:
-                System.out.print("You have far to go. ");
-                break;
+                return ("You have far to go. ");
+                
             case 5:
-                System.out.print("You are loving and giving. ");
-                break;
+                return ("You are loving and giving. ");
+                
             case 6:
-                System.out.print("You work hard for a living. ");
-                break;
+                return ("You work hard for a living. ");
+                
 
         }
 
