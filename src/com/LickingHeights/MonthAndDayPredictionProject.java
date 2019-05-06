@@ -264,26 +264,26 @@ public class MonthAndDayPredictionProject {
 
         switch (poem) {
             case 0:
-                return ("You are born on Sabbath day, and is fair and wise and good in every way. ");
-                
-            case 1:
-                return ("You are good looking. ");
-                
-            case 2:
-                return ("You are full of grace. ");
-                
-            case 3:
-                return ("You are full of woe. ");
-                
-            case 4:
-                return ("You have far to go. ");
-                
-            case 5:
-                return ("You are loving and giving. ");
-                
-            case 6:
                 return ("You work hard for a living. ");
                 
+            case 1:
+                return ("You are born on Sabbath day, and is fair and wise and good in every way. ");
+                
+            case 2:
+                return ("You are good looking. ");
+                
+            case 3:
+                return ("You are full of grace. ");
+                
+            case 4:
+                return ("You are full of woe. ");
+                
+            case 5:
+                return ("You have far to go. ");
+ 
+            case 6:
+                return ("You are loving and giving. ");
+               
 
         }
 
