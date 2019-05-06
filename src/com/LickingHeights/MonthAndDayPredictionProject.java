@@ -254,11 +254,6 @@ public class MonthAndDayPredictionProject {
             case 6:
                 return ("Friday");
                 
-
-            default:
-                return ("There is probably a bug here...\nBETTER FIX IT!");
-                
-
         }
 
         return String.valueOf(nameOfWeek);
