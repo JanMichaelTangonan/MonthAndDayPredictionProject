@@ -9,8 +9,8 @@ public class MonthAndDayPredictionProject {
         int m;//monthInput
         int q;//dayInput
         int yearInput;//Year input
-        int nameOfWeek= 0;//The day of the week that the user was born in.
-        int thePoem= 0;//The poem depending on the users birthday.*/
+        //int nameOfWeek;//The day of the week that the user was born in.
+        //int thePoem;//The poem depending on the users birthday.*/
 
         boolean loop = true;
 
@@ -24,17 +24,14 @@ public class MonthAndDayPredictionProject {
                     + "Friday's child is loving and giving\n" + "Saturday's child is loving and giving\n" + "But the child born on the Sabbath Day, Is fair and wise and good in every way\n"
                     + "\n" + "Let's find out which of the poems corresponds with your birthday!");
 
+            System.out.println("");
+
             //Question prompts
-            do{System.out.println("What month were you born?");
-                m = userBirthDayInput.nextInt();
+            System.out.println("What month were you born?");
+            m = userBirthDayInput.nextInt();
 
-            }while (m<=1 || m>=12);
-
-
-            do{System.out.println("What day were you born?");
-                q = userBirthDayInput.nextInt();
-
-            }while (q<=1 || q>=31);
+            System.out.println("What day were you born?");
+            q = userBirthDayInput.nextInt();
 
             System.out.println("What year were you born? (Please type 4 digits)");
             yearInput = userBirthDayInput.nextInt();
@@ -42,19 +39,19 @@ public class MonthAndDayPredictionProject {
 
             //Results
 
-            int h =calculations(m,q,yearInput);
+            //int h =calculations(m,q,yearInput);
 
             System.out.println("There are " + dayOfTheMonth( m,yearInput) + " days in " + monthOfBirth(m));
 
             System.out.println("According to your input you were born in " + monthOfBirth(m) + ","+ q+ ","  + yearInput );
 
-            System.out.println("According to your input you were born on a " + dayOfTheWeek(nameOfWeek));
+            System.out.println("According to your input you were born on a " + dayOfTheWeek(calculations(m,q,yearInput)));
 
-            System.out.println("Your birthday states that " + poemDependingOnDay(thePoem));
+            System.out.println(poemDependingOnDay(calculations(m,q,yearInput)) + " Is the poem that describes you.");
 
             System.out.println("You have reached the end of the program. Please type another birth date :D!");
 
-            System.out.println("----------END----------");
+            System.out.println("---------------END---------------");
 
             System.out.println("");
 
@@ -68,13 +65,13 @@ public class MonthAndDayPredictionProject {
 
     public static int calculations(int month, int q, int year) {
 
-        if (month<=2){
+        if (month<=1){
             month = numberOfMonthForCalculations(month);
             year = year-1;
         }
         int K = year % 100;
         int J = year / 100;
-        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5* J)) % 7;
+        int h = (q + (13 * (month + 1) / 5) + K + (K / 4) + (J / 4) + 5* J) % 7;
 
 
         return h;
@@ -104,24 +101,16 @@ public class MonthAndDayPredictionProject {
                 return 31;
 
             case 2:
-                if(year % 4 == 0){
+                if(year % 4 == 0 || year%100 == 0 || year%400 == 0){
 
-                    if(year%100 == 0){
-
-                        if(year%400 == 0)
-                            return 29;
-
-                        else{
-
-                            return 28;}
-                    }else {
-
-                        return 28;}
+                    return 29;
 
                 }else
                     return 28;
 
             default:
+                break;
+
 
         }
 
@@ -177,7 +166,7 @@ public class MonthAndDayPredictionProject {
                 return ("December");
 
             default:
-                System.out.print("ERROR!\n" + "The month that you have entered does not exist.");
+                System.out.print("ERROR!\n" + "The month that you have entered does not exist.\n" + "Please restart and type again!");
 
 
         }
@@ -240,30 +229,30 @@ public class MonthAndDayPredictionProject {
 
         switch (nameOfWeek) {
             case 0:
-                System.out.println("Sunday");
+                System.out.println("Saturday");
                 break;
 
             case 1:
-                System.out.println("Monday");
+                System.out.println("Sunday");
                 break;
 
             case 2:
-                System.out.println("Tuesday");
+                System.out.println("Monday");
                 break;
             case 3:
-                System.out.println("Wednesday");
+                System.out.println("Tuesday");
                 break;
 
             case 4:
-                System.out.println("Thursday");
+                System.out.println("Wednesday");
                 break;
 
             case 5:
-                System.out.println("Friday");
+                System.out.println("Thursday");
                 break;
 
             case 6:
-                System.out.println("Saturday");
+                System.out.println("Friday");
                 break;
 
             default:
