@@ -224,7 +224,7 @@ public class MonthAndDayPredictionProject {
     }
 
 
-    public static int dayOfTheWeek(int nameOfWeek) {
+    public static String dayOfTheWeek(int nameOfWeek) {
         //The days of the week
 
         switch (nameOfWeek) {
@@ -261,10 +261,10 @@ public class MonthAndDayPredictionProject {
 
         }
 
-        return nameOfWeek;
+        return String.valueOf(nameOfWeek);
     }
 
-    public static int poemDependingOnDay(int poem) {
+    public static String poemDependingOnDay(int poem) {
         //Poems according to date of birth
 
         switch (poem) {
@@ -292,7 +292,7 @@ public class MonthAndDayPredictionProject {
 
         }
 
-        return poem;
+        return String.valueOf(poem);
     }
 }
 
