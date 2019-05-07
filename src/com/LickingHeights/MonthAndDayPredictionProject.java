@@ -9,8 +9,6 @@ public class MonthAndDayPredictionProject {
         int m;//monthInput
         int q;//dayInput
         int yearInput;//Year input
-        //int nameOfWeek;//The day of the week that the user was born in.
-        //int thePoem;//The poem depending on the users birthday.*/
 
         boolean loop = true;
 
@@ -65,7 +63,7 @@ public class MonthAndDayPredictionProject {
 
     public static int calculations(int month, int q, int year) {
 
-        if (month<=1){
+        if (month<=2){
             month = numberOfMonthForCalculations(month);
             year = year-1;
         }
@@ -267,7 +265,7 @@ public class MonthAndDayPredictionProject {
                 return ("You work hard for a living. ");
                 
             case 1:
-                return ("You are born on Sabbath day, and is fair and wise and good in every way. ");
+                return ("You are fair and wise and good in every way. ");
                 
             case 2:
                 return ("You are good looking. ");
